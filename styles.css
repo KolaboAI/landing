@@ -99,69 +99,41 @@ a:hover {
     color: #ffffff; /* White for headings */
 }
 
-/* Social Proof Section */
-.social-proof {
+/* Join Waitlist Section */
+.join-waitlist {
     padding: 80px 20px;
-    background-color: #1e1e1e;
+    background-color: #292929; /* Darker background for contrast */
     text-align: center;
+    color: #ffffff; /* White text for contrast */
 }
 
-.social-proof .logos img {
-    max-width: 150px;
-    margin: 20px;
-    filter: brightness(0) invert(1); /* Invert logos for dark mode */
-}
-
-.social-proof .testimonial {
-    margin-top: 40px;
-    font-style: italic;
-    color: #b0b0b0; /* Lighter gray for testimonials */
-}
-
-.pricing {
-    padding: 80px 20px;
-    background-color: #1e1e1e;
-    text-align: center;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-}
-
-.pricing-item {
-    padding: 40px 20px;
-    border-radius: 8px;
-    background-color: #292929;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-.pricing-item h3 {
+.join-waitlist h2 {
+    font-size: 36px;
     margin-bottom: 20px;
-    font-size: 24px;
-    color: #ffffff; /* White for headings */
+    color: #ffffff;
 }
 
-.pricing-item .price {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #ff6363; /* Accent color for price */
-}
-
-.pricing-item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pricing-item ul li {
-    margin-bottom: 10px;
+.join-waitlist p {
+    font-size: 18px;
+    margin-bottom: 30px;
     color: #b0b0b0;
 }
 
-.pricing-item .cta-button {
+.join-waitlist form {
+    display: inline-block;
+    text-align: center;
+}
+
+.join-waitlist input[type="email"] {
+    padding: 15px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.join-waitlist button.cta-button {
     background-color: #ff6363;
     color: white;
     padding: 15px 30px;
@@ -172,7 +144,7 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 
-.pricing-item .cta-button:hover {
+.join-waitlist button.cta-button:hover {
     background-color: #e55a5a;
 }
 

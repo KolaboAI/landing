@@ -19,7 +19,7 @@
                 <p>Collaborate. Generate. Deploy.</p>
             </div>
             <div class="hero-image">
-                <img src="Header.png" alt="Ko/abo Interface">
+                <img src="images\Header.png" alt="Ko/abo Interface">
             </div>
         </div>
     </header>
@@ -63,75 +63,18 @@
         </div>
     </section>
 
-    <!-- Social Proof Section -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>Trusted by Developers Worldwide</h2>
-            <div class="logos">
-                <img src="company-logo-1.png" alt="">
-                <img src="company-logo-2.png" alt="">
-                <img src="company-logo-3.png" alt="">
-                <img src="company-logo-4.png" alt="">
-            </div>
-            <p class="testimonial">"Ko/abo has revolutionized the way we develop apps. The natural language coding feature is a game-changer!" - Alex from TechCorp</p>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-<section class="pricing">
+<!-- Join Waitlist Section -->
+<section class="join-waitlist">
     <div class="container">
-        <h2>Choose Your Plan</h2>
-        <div class="pricing-grid">
-            <!-- Starter Plan -->
-            <div class="pricing-item">
-                <h3>Starter</h3>
-                <p class="price">Free</p>
-                <ul>
-                    <li>Basic Features</li>
-                    <li>Access to Core Tools</li>
-                    <li>Community Support</li>
-                </ul>
-                <button class="cta-button">Get Started</button>
-            </div>
-            <!-- Basic Plan -->
-            <div class="pricing-item">
-                <h3>Basic</h3>
-                <p class="price">$19/month</p>
-                <ul>
-                    <li>Natural Language Coding</li>
-                    <li>Collaborative Version Control</li>
-                    <li>Basic Support</li>
-                </ul>
-                <button class="cta-button">Choose Plan</button>
-            </div>
-            <!-- Pro Plan -->
-            <div class="pricing-item">
-                <h3>Pro</h3>
-                <p class="price">$49/month</p>
-                <ul>
-                    <li>Everything in Basic</li>
-                    <li>Visual Preview</li>
-                    <li>One-Click Deployment</li>
-                    <li>Priority Support</li>
-                </ul>
-                <button class="cta-button">Choose Plan</button>
-            </div>
-            <!-- Enterprise Plan -->
-            <div class="pricing-item">
-                <h3>Enterprise</h3>
-                <p class="price">Contact Us</p>
-                <ul>
-                    <li>Everything in Pro</li>
-                    <li>GitHub Integration</li>
-                    <li>Database Connectivity</li>
-                    <li>Dedicated Support</li>
-                </ul>
-                <button class="cta-button">Choose Plan</button>
-            </div>
-        </div>
+        <h2>Be the First to Experience Ko/abo</h2>
+        <p>Join our waitlist to get early access and exclusive updates!</p>
+        <form id="waitlist-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" class="cta-button">Join Waitlist</button>
+        </form>
+        <p id="waitlist-message" style="display: none;">Thank you for joining our waitlist!</p>
     </div>
 </section>
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -145,6 +88,63 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+<!-- Include Firebase SDK for Firestore -->
+<script type="module">
+    // Import the Firebase functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyB33GMKnur-V9sJASr9Ohymo6rD0mBmNJQ",
+      authDomain: "proto-412f7.firebaseapp.com",
+      projectId: "proto-412f7",
+      storageBucket: "proto-412f7.appspot.com",
+      messagingSenderId: "165881823175",
+      appId: "1:165881823175:web:ef985b7bc45c69df1763e2"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    // Form Submission Handling
+    document.getElementById('waitlist-form').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent default form submission
+  
+      const emailInput = document.getElementById('email');
+      const email = emailInput.value;
+  
+      // Basic email validation
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+  
+      try {
+        // Add email to Firestore
+        const docRef = await addDoc(collection(db, 'waitlist'), {
+          email: email,
+          timestamp: serverTimestamp()  // Automatically add a timestamp
+        });
+  
+        // Show success message
+        document.getElementById('waitlist-message').style.display = 'block';
+        emailInput.value = ''; // Clear the input field
+  
+        console.log("Document written with ID: ", docRef.id);
+      } catch (error) {
+        console.error("Error adding document: ", error);
+        alert("There was an error. Please try again.");
+      }
+    });
+  
+    // Basic email validation function
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+  </script>
+  
 </body>
 </html>
