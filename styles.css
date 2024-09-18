@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #e0e0e0; /* Light gray text color */
+    background-color: #1e1e1e; /* Dark background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin: 20px 0;
+    font-weight: 600;
+    color: #ffffff; /* White text for headings */
+}
+
+p {
+    margin: 10px 0;
+    color: #b0b0b0; /* Lighter gray for body text */
+}
+
+a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e1e1e 0%, #292929 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero .hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 8px; /* Optional: Add rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+}
+
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    background-color: #1e1e1e; /* Match with body background */
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.feature-item {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #292929; /* Darker background for feature cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: left;
+}
+
+.feature-item img {
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+    color: #ffffff; /* White for headings */
+}
+
+/* Social Proof Section */
+.social-proof {
+    padding: 80px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.social-proof .logos img {
+    max-width: 150px;
+    margin: 20px;
+    filter: brightness(0) invert(1); /* Invert logos for dark mode */
+}
+
+.social-proof .testimonial {
+    margin-top: 40px;
+    font-style: italic;
+    color: #b0b0b0; /* Lighter gray for testimonials */
+}
+
+.pricing {
+    padding: 80px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.pricing-item {
+    padding: 40px 20px;
+    border-radius: 8px;
+    background-color: #292929;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.pricing-item h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff; /* White for headings */
+}
+
+.pricing-item .price {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff6363; /* Accent color for price */
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-item ul li {
+    margin-bottom: 10px;
+    color: #b0b0b0;
+}
+
+.pricing-item .cta-button {
+    background-color: #ff6363;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-item .cta-button:hover {
+    background-color: #e55a5a;
+}
+
+/* Footer */
+.footer {
+    background-color: #292929;
+    color: #b0b0b0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    margin: 0 10px;
+}
