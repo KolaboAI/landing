@@ -99,6 +99,21 @@ a:hover {
     color: #ffffff; /* White for headings */
 }
 
+.introduction {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    color: #666;
+}
+
 /* Join Waitlist Section */
 .join-waitlist {
     padding: 80px 20px;
