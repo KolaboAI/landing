@@ -1,181 +1,182 @@
 /* General Styles */
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #e0e0e0; /* Light gray text color */
-    background-color: #1e1e1e; /* Dark background color */
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light gray text color */
+  background-color: #1e1e1e; /* Dark background color */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-h1, h2, h3 {
-    margin: 20px 0;
-    font-weight: 600;
-    color: #ffffff; /* White text for headings */
+h1,
+h2,
+h3 {
+  margin: 20px 0;
+  font-weight: 600;
+  color: #ffffff; /* White text for headings */
 }
 
 p {
-    margin: 10px 0;
-    color: #b0b0b0; /* Lighter gray for body text */
+  margin: 10px 0;
+  color: #b0b0b0; /* Lighter gray for body text */
 }
 
 a {
-    color: #ffffff; /* White text for links */
-    text-decoration: none;
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1e1e1e 0%, #292929 100%);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
+  background: linear-gradient(135deg, #1e1e1e 0%, #292929 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
 }
 
 .hero .hero-content {
-    z-index: 2;
-    position: relative;
+  z-index: 2;
+  position: relative;
 }
 
 .hero h1 {
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .hero .hero-image img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 50px;
-    border-radius: 8px; /* Optional: Add rounded corners for a softer look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 8px; /* Optional: Add rounded corners for a softer look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
 }
-
 
 /* Features Section */
 .features {
-    padding: 80px 20px;
-    background-color: #1e1e1e; /* Match with body background */
-    text-align: center;
+  padding: 80px 20px;
+  background-color: #1e1e1e; /* Match with body background */
+  text-align: center;
 }
 
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
 }
 
 .feature-item {
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #292929; /* Darker background for feature cards */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: left;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #292929; /* Darker background for feature cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: left;
 }
 
 .feature-item img {
-    max-width: 50px;
-    margin-bottom: 20px;
+  max-width: 50px;
+  margin-bottom: 20px;
 }
 
 .feature-item h3 {
-    margin-bottom: 10px;
-    color: #ffffff; /* White for headings */
+  margin-bottom: 10px;
+  color: #ffffff; /* White for headings */
 }
 
 .introduction {
-    padding: 60px 0;
-    text-align: center;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .introduction h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .introduction p {
-    font-size: 1.2em;
-    color: #666;
+  font-size: 1.2em;
+  color: #666;
 }
 
 /* Join Waitlist Section */
 .join-waitlist {
-    padding: 80px 20px;
-    background-color: #292929; /* Darker background for contrast */
-    text-align: center;
-    color: #ffffff; /* White text for contrast */
+  padding: 80px 20px;
+  background-color: #292929; /* Darker background for contrast */
+  text-align: center;
+  color: #ffffff; /* White text for contrast */
 }
 
 .join-waitlist h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .join-waitlist p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #b0b0b0;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #b0b0b0;
 }
 
 .join-waitlist form {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .join-waitlist input[type="email"] {
-    padding: 15px;
-    width: 300px;
-    border-radius: 8px;
-    border: none;
-    margin-right: 10px;
-    font-size: 16px;
+  padding: 15px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  font-size: 16px;
 }
 
-.join-waitlist button.cta-button {
-    background-color: #ff6363;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.join-waitlist .cta-button {
+  background-color: #ff6363;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .join-waitlist button.cta-button:hover {
-    background-color: #e55a5a;
+  background-color: #e55a5a;
 }
 
 /* Footer */
 .footer {
-    background-color: #292929;
-    color: #b0b0b0;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: #292929;
+  color: #b0b0b0;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .footer-links {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .footer-links a {
-    color: #e0e0e0;
-    margin: 0 10px;
+  color: #e0e0e0;
+  margin: 0 10px;
 }
