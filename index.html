@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ko/abo - Streamline Your App Development</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
@@ -27,127 +29,155 @@
         </div>
     </header>     
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Key Features</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <img src="feature-icon-1.png" alt="">
-                    <h3>Natural Language Coding</h3>
-                    <p>Generate HTML, CSS, and JavaScript code from natural language descriptions.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="feature-icon-2.png" alt="">
-                    <h3>Collaborative Version Control</h3>
-                    <p>Work on the same project simultaneously with version control.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="feature-icon-3.png" alt="">
-                    <h3>Visual Preview</h3>
-                    <p>See your code in action with real-time previews.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="feature-icon-4.png" alt="">
-                    <h3>One-Click Deployment</h3>
-                    <p>Deploy your applications with a single click.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="feature-icon-5.png" alt="">
-                    <h3>GitHub Integration</h3>
-                    <p>Connect with GitHub repositories for seamless collaboration.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="feature-icon-6.png" alt="">
-                    <h3>Database Connectivity</h3>
-                    <p>Connect and interact with various databases directly from Ko/abo.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Introduction Section -->
+    <section class="introduction">
+      <div class="container">
+        <h2>Designed for Product Managers and Startup Founders</h2>
+        <p>
+          Ko/abo is your intuitive platform to swiftly transform concepts into
+          functional prototypes. Skip the steep learning curves and dive
+          straight into building with a user interface that feels familiar and
+          effortless.
+        </p>
+      </div>
     </section>
 
-<!-- Join Waitlist Section -->
-<section class="join-waitlist">
-    <div class="container">
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <img src="feature-icon-1.png" alt="" />
+            <h3>Natural Language Coding</h3>
+            <p>
+              Generate HTML, CSS, and JavaScript code from natural language
+              descriptions.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="feature-icon-2.png" alt="" />
+            <h3>Collaborative Version Control</h3>
+            <p>Work on the same project simultaneously with version control.</p>
+          </div>
+          <div class="feature-item">
+            <img src="feature-icon-3.png" alt="" />
+            <h3>Visual Preview</h3>
+            <p>See your code in action with real-time previews.</p>
+          </div>
+          <div class="feature-item">
+            <img src="feature-icon-4.png" alt="" />
+            <h3>One-Click Deployment</h3>
+            <p>Deploy your applications with a single click.</p>
+          </div>
+          <div class="feature-item">
+            <img src="feature-icon-5.png" alt="" />
+            <h3>GitHub Integration</h3>
+            <p>Connect with GitHub repositories for seamless collaboration.</p>
+          </div>
+          <div class="feature-item">
+            <img src="feature-icon-6.png" alt="" />
+            <h3>Database Connectivity</h3>
+            <p>
+              Connect and interact with various databases directly from Ko/abo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Waitlist Section -->
+    <section class="join-waitlist">
+      <div class="container">
         <h2>Be the First to Experience Ko/abo</h2>
         <p>Join our waitlist to get early access and exclusive updates!</p>
         <form id="waitlist-form">
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button type="submit" class="cta-button">Join Waitlist</button>
+          <!-- <input type="email" id="email" placeholder="Enter your email" required> -->
+          <a href="https://forms.gle/NxLSQwcGzAThTAu47" class="cta-button">
+            Join Waitlist
+          </a>
         </form>
-        <p id="waitlist-message" style="display: none;">Thank you for joining our waitlist!</p>
-    </div>
-</section>
+        <p id="waitlist-message" style="display: none">
+          Thank you for joining our waitlist!
+        </p>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Ko/abo. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-            </div>
+      <div class="container">
+        <p>&copy; 2024 Ko/abo. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
         </div>
+      </div>
     </footer>
 
-<!-- Include Firebase SDK for Firestore -->
-<script type="module">
-    // Import the Firebase functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyB33GMKnur-V9sJASr9Ohymo6rD0mBmNJQ",
-      authDomain: "proto-412f7.firebaseapp.com",
-      projectId: "proto-412f7",
-      storageBucket: "proto-412f7.appspot.com",
-      messagingSenderId: "165881823175",
-      appId: "1:165881823175:web:ef985b7bc45c69df1763e2"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-  
-    // Form Submission Handling
-    document.getElementById('waitlist-form').addEventListener('submit', async function(event) {
-      event.preventDefault(); // Prevent default form submission
-  
-      const emailInput = document.getElementById('email');
-      const email = emailInput.value;
-  
-      // Basic email validation
-      if (!validateEmail(email)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
-  
-      try {
-        // Add email to Firestore
-        const docRef = await addDoc(collection(db, 'waitlist'), {
-          email: email,
-          timestamp: serverTimestamp()  // Automatically add a timestamp
+    <!-- Include Firebase SDK for Firestore -->
+    <script type="module">
+      // Import the Firebase functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Form Submission Handling
+      document
+        .getElementById("waitlist-form")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          const emailInput = document.getElementById("email");
+          const email = emailInput.value;
+
+          // Basic email validation
+          if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          try {
+            // Add email to Firestore
+            const docRef = await addDoc(collection(db, "waitlist"), {
+              email: email,
+              timestamp: serverTimestamp(), // Automatically add a timestamp
+            });
+
+            // Show success message
+            document.getElementById("waitlist-message").style.display = "block";
+            emailInput.value = ""; // Clear the input field
+
+            console.log("Document written with ID: ", docRef.id);
+          } catch (error) {
+            console.error("Error adding document: ", error);
+            alert("There was an error. Please try again.");
+          }
         });
-  
-        // Show success message
-        document.getElementById('waitlist-message').style.display = 'block';
-        emailInput.value = ''; // Clear the input field
-  
-        console.log("Document written with ID: ", docRef.id);
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        alert("There was an error. Please try again.");
+
+      // Basic email validation function
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
       }
-    });
-  
-    // Basic email validation function
-    function validateEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email);
-    }
-  </script>
-  
-</body>
+    </script>
+  </body>
 </html>
