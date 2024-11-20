@@ -67,6 +67,12 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
 }
 
+.hero-video video {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the video covers the container neatly */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
 
 /* Features Section */
 .features {
