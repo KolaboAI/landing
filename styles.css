@@ -112,14 +112,17 @@ a:hover {
   text-align: center;
 }
 
-.introduction h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.introduction p {
+  font-size: 18px; /* Increase font size slightly for readability */
+  color: #b0b0b0; /* Consistent light gray for body text */
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+  line-height: 1.8; /* Improve readability with increased line height */
 }
 
-.introduction p {
-  font-size: 1.2em;
-  color: #666;
+.introduction h2 {
+  font-size: 2.2em; /* Slightly larger for emphasis */
+  margin-bottom: 20px;
+  color: #ffffff; /* Maintain white heading color */
 }
 
 /* Join Waitlist Section */
