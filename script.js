@@ -20,7 +20,9 @@ function setupLanguageButton(currentLang) {
 }
 
 function switchLanguage(lang) {
-  const url = new URL(window.location.href); // Get the current URL
-  url.searchParams.set('lang', lang); // Set the 'lang' query parameter
-  window.location.href = url.toString(); // Reload the page with the new parameter
+  if (lang === 'ja') {
+    window.location.href = 'index-ja.html'; // Redirect to Japanese page
+  } else {
+    window.location.href = 'index.html'; // Redirect to English page
+  }
 }
