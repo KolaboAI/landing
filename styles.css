@@ -76,6 +76,40 @@ a:hover {
     border-radius: 8px; /* Optional: Rounded corners */
 }
 
+.language-switcher {
+  position: absolute; /* For flexible placement */
+  top: 20px;          /* Adjust based on header height */
+  right: 20px;        /* Adjust for alignment */
+  display: flex;
+  gap: 10px;          /* Space between buttons */
+}
+
+.lang-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.lang-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;       /* Adjust for smaller screens */
+    right: 10px;
+  }
+  .lang-btn {
+    font-size: 12px; /* Smaller button text for mobile */
+    padding: 4px 8px;
+  }
+}
+
 /* Features Section */
 .features {
   padding: 80px 20px;
