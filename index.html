@@ -107,77 +107,7 @@
     <footer class="footer">
       <div class="container">
         <p>&copy; 2024 Ko/abo. All Rights Reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Contact Us</a>
-        </div>
       </div>
     </footer>
-
-    <!-- Include Firebase SDK for Firestore -->
-    <script type="module">
-      // Import the Firebase functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-      import {
-        getFirestore,
-        collection,
-        addDoc,
-        serverTimestamp,
-      } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
-
-      // Form Submission Handling
-      document
-        .getElementById("waitlist-form")
-        .addEventListener("submit", async function (event) {
-          event.preventDefault(); // Prevent default form submission
-
-          const emailInput = document.getElementById("email");
-          const email = emailInput.value;
-
-          // Basic email validation
-          if (!validateEmail(email)) {
-            alert("Please enter a valid email address.");
-            return;
-          }
-
-          try {
-            // Add email to Firestore
-            const docRef = await addDoc(collection(db, "waitlist"), {
-              email: email,
-              timestamp: serverTimestamp(), // Automatically add a timestamp
-            });
-
-            // Show success message
-            document.getElementById("waitlist-message").style.display = "block";
-            emailInput.value = ""; // Clear the input field
-
-            console.log("Document written with ID: ", docRef.id);
-          } catch (error) {
-            console.error("Error adding document: ", error);
-            alert("There was an error. Please try again.");
-          }
-        });
-
-      // Basic email validation function
-      function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-      }
-    </script>
   </body>
 </html>
