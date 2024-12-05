@@ -1,27 +1,26 @@
-// On page load, check the URL for the language query
+// On page load, check the URL for the language query parameter
 window.onload = function () {
   const params = new URLSearchParams(window.location.search);
-  const lang = params.get('lang') || 'en'; // Default to English
-  loadLanguage(lang);
+  const lang = params.get('lang') || 'en'; // Default to English if no parameter is found
+  setupLanguageButton(lang); // Set up the language toggle button
 };
 
-function loadLanguage(lang) {
-  if (lang === 'ja') {
-    document.querySelector('h1').textContent = 'Ko/abo - コラボレーション、構築、ローンチ 🚀';
-    document.querySelector('p').textContent = 'ウェブアプリケーションの開発を効率化';
-    // Add translations for all relevant content
+function setupLanguageButton(currentLang) {
+  const button = document.getElementById('lang-toggle'); // Get the toggle button
+
+  if (currentLang === 'ja') {
+    // If the current language is Japanese, show "English" button
+    button.textContent = 'English';
+    button.onclick = () => switchLanguage('en'); // Set click behavior to switch to English
   } else {
-    document.querySelector('h1').textContent = 'Ko/abo - Collaborate, Build, Launch 🚀';
-    document.querySelector('p').textContent = 'Streamline your web application development';
-    // Add English content
+    // If the current language is English, show "日本語" button
+    button.textContent = '日本語';
+    button.onclick = () => switchLanguage('ja'); // Set click behavior to switch to Japanese
   }
 }
 
-// Attach event listeners to language buttons
-document.getElementById('lang-en').addEventListener('click', () => {
-  window.location.search = '?lang=en';
-});
-
-document.getElementById('lang-ja').addEventListener('click', () => {
-  window.location.search = '?lang=ja';
-});
+function switchLanguage(lang) {
+  const url = new URL(window.location.href); // Get the current URL
+  url.searchParams.set('lang', lang); // Set the 'lang' query parameter
+  window.location.href = url.toString(); // Reload the page with the new parameter
+}
