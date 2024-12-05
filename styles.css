@@ -84,6 +84,13 @@ a:hover {
   gap: 10px;          /* Space between buttons */
 }
 
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
 .lang-btn {
   background-color: transparent;
   border: 1px solid #fff;
@@ -93,21 +100,12 @@ a:hover {
   cursor: pointer;
   border-radius: 5px;
   font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .lang-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 768px) {
-  .language-switcher {
-    top: 10px;       /* Adjust for smaller screens */
-    right: 10px;
-  }
-  .lang-btn {
-    font-size: 12px; /* Smaller button text for mobile */
-    padding: 4px 8px;
-  }
+  color: #000;
 }
 
 /* Features Section */
