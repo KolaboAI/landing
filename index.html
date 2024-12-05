@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Kolabo - A platform designed for product managers and startup founders to easily collaborate, build, and launch applications">
     <title>Ko/abo - Streamline Your App Development</title>
+        <script>
+      // Detect Browser Language
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('ja')) {
+        window.location.href = 'index-ja.html'; // Redirect to Japanese page
+      }
+    </script>
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
